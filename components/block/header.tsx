@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
 
 const menuItems = [
   {
@@ -88,13 +88,15 @@ export default function Header() {
 
   return (
     <div>
-      <span className="text-sm bg-black text-white w-full flex text-center py-1 justify-center">
+      <span className="text-sm bg-blue-700 text-white w-full flex text-center py-1 justify-center">
         Free delivery in all around UAE above AED 100
       </span>
       <header className="sticky top-0 z-10 bg-white shadow dark:shadow-lg">
-        <div className="flex items-center justify-between h-16 px-4 md:px-6">
+        <div className="flex items-center justify-between h-16 px-4 md:px-20">
           <Link className="flex-col pr-4 md:pr-8" href="/">
-            <p className="text-xl md:text-2xl font-bold">Crizalapparel</p>
+            <p className="text-xl md:text-2xl font-bold text-blue-700">
+              BabyLux Service
+            </p>
           </Link>
           <nav className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -102,7 +104,7 @@ export default function Header() {
             </button>
           </nav>
           <nav
-            className={`absolute top-0 left-0 w-full bg-sky-100 h-screen transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:bg-transparent md:w-auto md:h-auto`}
+            className={`absolute top-0 left-0 w-full h-screen transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:bg-transparent md:w-auto md:h-auto`}
           >
             <div className="flex md:hidden items-center justify-end h-16 px-4">
               <button onClick={() => setIsMenuOpen(false)}>
@@ -113,30 +115,19 @@ export default function Header() {
               {menuItems.map((item, index) => (
                 <div className="group" key={index}>
                   <Link
-                    className="flex items-center px-8 py-2 text-lg md:justify-start hover:bg-sky-200"
+                    className="flex items-center px-4 py-2 text-lg md:justify-start text-blue-700 hover:underline"
                     href={item.href}
                   >
                     {item.label}
                   </Link>
-                  {item.subItems && (
-                    <div className="md:absolute md:bg-white md:shadow-lg md:rounded-lg md:mt-1 md:min-w-[200px] md:hidden group-hover:block">
-                      <div className="flex flex-col">
-                        {item.subItems.map((subItem, subIndex) => (
-                          <Link
-                            className="px-4 py-2 hover:bg-sky-100"
-                            href={subItem.href}
-                            key={subIndex}
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
           </nav>
+          <div className="flex px-4 py-2 gap-4 bg-blue-700 rounded-3xl">
+            <PhoneCall className="w-6 h-6 text-white" />
+            <span className="text-white">Call Us</span>
+          </div>
         </div>
       </header>
     </div>
