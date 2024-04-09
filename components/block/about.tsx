@@ -44,7 +44,7 @@ export default function About() {
               <CheckIcon className="inline-block h-6 w-6 text-black bg-blue-100 rounded-full p-1 mr-4" />
               From thorough cleanings to repairs and rentals, we offer a full
               spectrum of services for your baby gear, making us your one-stop
-              shop for all baby gear maintenance needs."
+              shop for all baby gear maintenance needs.
             </p>
             <p className="text-base">
               <CheckIcon className="inline-block h-6 w-6 text-black bg-blue-100 rounded-full p-1 mr-4" />
