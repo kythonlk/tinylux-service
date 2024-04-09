@@ -48,7 +48,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <div className="flex justify-center items-center ">
-      <Card className="shadow-lg w-[700px]">
+      <Card className="shadow-lg md:w-[800px]">
         <CardContent className="p-6">
           <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
           <Accordion className="w-full mt-4" type="multiple">

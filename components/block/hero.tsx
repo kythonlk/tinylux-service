@@ -4,15 +4,15 @@ import heroimage from "@/assets/images/banner.jpg";
 
 export default function Hero() {
   return (
-    <section className="flex w-max-full">
-      <div className="flex flex-col  space-y-4 gap-4 pl-4 md:pl-20 my-auto">
+    <section className="flex w-max-full flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row space-y-4 gap-4 z-0 pl-4 md:pl-20 bg-gray-50/50 md:bg-transparent pb-4 my-auto">
         <div className="space-y-2">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+          <div className="space-y-2 pb-4">
+            <h1 className="text-3xl font-bold pt-4 tracking-tighter pb-4 sm:text-5xl">
               Discover the Perfect Baby Items for Every Stage
             </h1>
-            <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-              From newborn essentials to toddler must-haves, we've got you
+            <p className="mx-auto  md:text-xl text-gray-900">
+              From newborn essentials to toddler must-haves, we&apos;ve got you
               covered.
             </p>
           </div>
@@ -26,9 +26,9 @@ export default function Hero() {
       </div>
       <Image
         alt="Hero"
-        className=""
-        height="700"
-        width="1000"
+        className="mt-[-240px] md:mt-0 object-cover h-60 md:h-[600px]"
+        height="1000"
+        width="1200"
         src={heroimage}
       />
     </section>

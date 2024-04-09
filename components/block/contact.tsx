@@ -8,11 +8,11 @@ export default function Contact() {
   return (
     <Card className="shadow-lg">
       <CardContent>
-        <div className="pt-4 w-[600px]">
+        <div className="pt-8 md:w-[800px]">
           <div className="space-y-2">
             <h2 className="text-3xl font-semibold">Contact Us</h2>
             <p className="text-zinc-500 dark:text-zinc-400">
-              Fill out the form below and we'll get back to you as soon as
+              Fill out the form below and we&apos;ll get back to you as soon as
               possible.
             </p>
           </div>

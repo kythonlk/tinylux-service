@@ -98,13 +98,17 @@ export default function Header() {
               BabyLux Service
             </p>
           </Link>
+          <div className="flex md:hidden px-4 py-2 gap-4 bg-blue-700 rounded-3xl">
+            <PhoneCall className="w-6 h-6 text-white" />
+            <span className="text-white">Call Us</span>
+          </div>
           <nav className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <Menu className="w-6 h-6" />
             </button>
           </nav>
           <nav
-            className={`absolute top-0 left-0 w-full h-screen transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:bg-transparent md:w-auto md:h-auto`}
+            className={`absolute bg-gray-100  z-50 top-0 left-0 w-full h-screen transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:bg-transparent md:w-auto md:h-auto`}
           >
             <div className="flex md:hidden items-center justify-end h-16 px-4">
               <button onClick={() => setIsMenuOpen(false)}>
@@ -115,7 +119,7 @@ export default function Header() {
               {menuItems.map((item, index) => (
                 <div className="group" key={index}>
                   <Link
-                    className="flex items-center px-4 py-2 text-lg md:justify-start text-blue-700 hover:underline"
+                    className="flex items-center px-4 py-2 text-lg md:justify-start z-10 text-blue-700 hover:underline"
                     href={item.href}
                   >
                     {item.label}
@@ -124,7 +128,7 @@ export default function Header() {
               ))}
             </div>
           </nav>
-          <div className="flex px-4 py-2 gap-4 bg-blue-700 rounded-3xl">
+          <div className="hidden md:flex px-4 py-2 gap-4 bg-blue-700 rounded-3xl">
             <PhoneCall className="w-6 h-6 text-white" />
             <span className="text-white">Call Us</span>
           </div>
